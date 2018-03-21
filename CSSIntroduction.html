@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>CSS: Introduction</title>
+</head>
+  <body>
+    <b>
+    <h1>CSS: Introduction</h1>
+      <h3>
+        <h3>Styling, selectors and declarations</h3>
+        <p>Where HTML is used for structuring, CSS is used for styling. A CSS 'rule set' consists of a selector and a
+          declaration with different properties and property values:
+        </p>
+        <img src="http://www.olessons.com/wp-content/uploads/2016/11/css.jpg" alt="A CSS rule set"/>
+
+        <div>
+          <h3>External, internal & inline</h3>
+          <p>
+            There are three different ways of styling your page. If you'd like to use an external stylesheet you link to
+            it in the html file like this:
+          </p>
+          <pre class="code-block"><code>
+            &lt;!DOCTYPE html&gt;
+            &lt;html&gt;
+              &lt;head&gt;
+                &lt;title&gt;External Stylesheets&lt;/title&gt;
+                &lt;link rel="stylesheet" type="text/css" href="../stylesheets/index.css"&gt;
+              &lt;head&gt;
+
+              &lt;body&gt;
+                &lt;!-- Here is the rest of your code --&gt;
+              &lt;/body&gt;
+            &lt;/html&gt;
+          </code></pre>
+          <p>Your code is in your css file, looks just like the first example above.</p>
+
+          <p>
+            An internal stylesheet is completely placed within the head section of your html file. It will look something
+            like this:
+          </p>
+          <pre class="code-block"><code>
+            &lt;!DOCTYPE html&gt;
+            &lt;html&gt;
+              &lt;head&gt;
+                  &lt;title&gt;External Stylesheets&lt;/title&gt;
+                  &lt;style&gt;
+                    p {
+                      color: white;
+                      width: 80%;
+                    }
+
+                    .header {
+                      background-color: black;
+                    }
+                  &lt;/style&gt;
+              &lt;head&gt;
+              &lt;body&gt;
+                  &lt;!-- Here is the rest of your code --&gt;
+              &lt;/body&gt;
+            &lt;/html&gt;
+          </code></pre>
+          <p>
+            You can imagine this might become quite long as your file is doing multiple things at once
+            (both styling and structuring) your app might be quite chaotic!
+          </p>
+
+          <p>Inline styling will look like this:</p>
+          <pre class="code-block"><code>
+            &lt;!DOCTYPE html&gt;
+            &lt;html&gt;
+              &lt;head&gt;
+                &lt;!-- code with all your metadata --&gt;
+              &lt;head&gt;
+              &lt;body&gt;
+                &lt;p style="color: blue; font-size: 46px;"&gt;
+                  &lt;!-- Code for the content of your paragraph--&gt;
+                &lt;/p&gt;
+              &lt;/body&gt;
+            &lt;/html&gt;
+          </code></pre>
+        </div>
+
+        <div>
+          <h3>What should I use?</h3>
+          <p>
+            To add CSS styles to your website, you can use three different ways to insert the CSS.
+            You can use an "External Stylesheet", "Internal Stylesheet", or "Inline Style".
+            The benefit for using each depends on what you are doing with the Style.The following
+            table explains the difference between them.
+          </p>
+
+          <table>
+            <thead>
+              <tr class="table-header">
+                <th>external stylesheet</th>
+                <th>internal stylesheet</th>
+                <th>inline styles</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  The External Stylesheet is a .css file that you link your website to.
+                  This makes it so that whatever you change in the .css sheet, will affect
+                  every page in your website that it is linked to. This prevents you from
+                  having to make many code changes in each page. This is for "global" site changes.
+                  As you would like your files to do only one thing at the time (for exmaple structuring,
+                  but not styling!) this is the most favorable option.
+                </td>
+                <td>
+                  This makes it easy to apply styles like classes or id's in order to reuse the code.
+                  The downside of using an internal stylesheet is that changes to the internal stylesheet
+                  only affect the page the code is inserted into, so your code wouldn't be very DRY, and
+                  it isn't clear where styling is happening.
+                </td>
+                <td>
+                  The Inline style is specific to the tag itself. The inline style uses the HTML "style"
+                  attribute to style a specific tag. This is not recommended, as every CSS change has to
+                  be made in every tag that has the inline style applied to it. The Inline style is good
+                  for one an individual CSS change that you do not use repeatedly through the site.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div>
+          <h3>Cascading</h3>
+          <p>
+            At some point in your work, you'll find yourself in the situation where multiple CSS rules will
+            have selectors matching the same element. In such cases, which CSS rule "wins", and ends up being
+            the one that is finally applied to the element? This is controlled by a mechanism called the Cascade;
+            this is also related to inheritance (elements will take some property values from their parents, but not others.)
+            At its most basic level it indicates that the order of CSS rules matter, but it's more complex than that.
+            Which selectors win in the cascade depends on three factors (these are listed in order of weight — earlier ones will overrule later ones):
+          </p>
+
+          <ul>
+            <li>Importance</li>
+            <li>Specificity</li>
+            <li>Source order</li>
+          </ul>
+
+          <p>
+            The declaration !important always wins over all others. Let's look at an example from
+            <a class= "inline" href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance">
+              MDN
+            </a>
+          </p>
+
+          <pre class="code-block"><code>
+            &lt;p class="better"&gt;This is a paragraph&lt;/p&gt;
+            &lt;p class="better" id="winning"&gt;One selector to rule them all!&lt;/p&gt;
+          </code></pre>
+          <pre class="code-block"><code>
+            #winning {
+              background-color: red;
+              border: 1px solid black;
+            }
+
+            .better {
+              background-color: gray;
+              border: none !important;
+            }
+
+            p {
+              background-color: blue;
+              color: white;
+              padding: 5px;
+            }
+          </code></pre>
+
+          <p>
+            The color and padding values of the rules in the element-selector will be applied (white and 5px), but not the background-color.
+            Why? Really all three should surely apply, because rules later in the source order generally override earlier
+            rules.
+          </p>
+          <p>
+            However, the rules above it win. Because 'id' and 'class' selectors have higher specificity than element selectors.
+          </p>
+          <p>
+            Both elements have a class of 'better', but the first one has an id called #winning and id's have an even higher
+            specificity than classes. You can only have one element with a unique id on a page, but many elements with
+            the same class — ID selectors are very specific in what they target. The red background color and the 1 pixel
+            black border should both be applied to the 2nd element, with the first element getting the gray background
+            color, and no border, as specified by the class.
+          </p>
+          <p>
+            The 2nd element does get the red background color, but no border. Why? Because of the !important declaration
+            in the second rule — including this after border: none means that this declaration will win over the border
+            value in the previous rule, even though the ID has higher specificity.
+          </p>
+
+    </h3>
+</b>
+  </body>
+  <footer>
+
+    <p><a href="./colorTextAndImages.html">Next >></a></p>
+    <p><a href="./index.html"><< Back to homepage</a></p>
+
+  </footer>
+</html>
