@@ -8,14 +8,84 @@
 
   <body>
     <h1>HTML : Structure</h1>
-    <h2>
-      <ul>
-        <li>What is HTML used for?</li>
-        <li>Which tags will always be present on an HTML webpage?</li>
-        <li>How do you change the title of your tab to the name of your website?</li>
-      </ul>
-    </h2>
+    <h3>
+      <p>
+        HTML (Hyper Text Markup Language) is al about structuring. You will put structures in structures and maybe these will be put in other structures
+        again! Some structures of an HTML document will always be the same. A document
+        always consists of a Doctype declaration (to tell the browser what language
+        you are using) and an html part, where you will write all your code. You
+        start this part with &lt;html&gt; and end them with &lt;/html&gt;.
+      </p>
+      <p>
+        The 'html part' of your document consists again of two parts: a &lt;head&gt; part,
+        where you put info about the document, which will not display on the page itself.
+        In the &lt;body&gt; part, you will write all your code that should display on
+        the page.
+      </p>
+      <p>
+        An example of a division of an HTML-document that you will (almost) always use is:
+      </p>
+      <pre class="code-block"><code>
+        &lt;!DOCTYPE html&gt;
+
+        &lt;html&gt;
+
+          &lt;head&gt;
+            &lt;meta charset=&quot;utf-8&quot;&gt;
+            &lt;title&gt;
+              &lt;!-- this title will display in your browser tab!--&gt;
+            &lt;/title&gt;
+          &lt;/head&gt;
+
+          &lt;body&gt;
+            &lt;!-- this will display on the page !--&gt;
+          &lt;/body&gt;
+
+        &lt;/html&gt;
+      </code></pre>
+      <p>You can also use smaller divisions (divs) to specify what certain parts of your code are for:</p>
+      <pre class="code-block"><code>
+        &lt;!DOCTYPE html&gt;
+
+        &lt;html&gt;
+
+          &lt;head&gt;
+            &lt;meta charset=&quot;utf-8&quot;&gt;
+            &lt;title&gt;
+              &lt;!-- this title will display in your browser tab!--&gt;
+            &lt;/title&gt;
+          &lt;/head&gt;
+
+          &lt;body&gt;
+            &lt;div class="header"&gt;
+                &lt;!-- Here you can write your header!--&gt;
+            &lt;div &gt;
+
+            &lt;div class="main"&gt;
+                &lt;!-- Here you can write your main article!--&gt;
+            &lt;div &gt;
+
+            &lt;div class="footer"&gt;
+                &lt;!-- Here you can write your footer!--&gt;
+            &lt;div &gt;
+          &lt;/body&gt;
+
+        &lt;/html&gt;
+      </code></pre>
+      <p>
+        More ways of structuring your page with html can be found in
+        <a class="inline" href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure">this article on MDN</a>
+      </p>
+    </div>
+  </div>
+
+    </h3>
 
   </body>
+
+  <footer>
+    <p><a href="./htmlTagsAndAttributes.html">Next >></a></p>
+    <p><a href="./index.html"><< Back to homepage</a><p>
+  </footer>
 
 </html>
