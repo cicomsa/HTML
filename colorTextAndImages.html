@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <title>CSS: Color, Text and Images</title>
+  </head>
+
+  <body>
+    <h1>CSS: Color, Text and Images</h1>
+    <h3>
+      <p>Colors</p>
+      <p>You change a background color by selecting the element you need and adding the background-color selector:</p>
+           <pre class="code-block css-body"><code>
+             body {
+               background-color: lightblue;
+             }
+           </code></pre>
+
+           <p>A text color can be changed by selecting the element and adding the color selector:</p>
+           <pre class="code-block css-important"><code>
+             .important {
+               color: darkred;
+             }
+           </code></pre>
+
+           <p>Colors can be defined by names, hex color codes, or rgb color codes. So all of the following examples are correct:</p>
+           <pre class="code-block css-dangerous"><code>
+             .dangerous {
+               color: red;
+             }
+           </code></pre>
+
+           <pre class="code-block css-warning"><code>
+             .warning {
+               color: #FFA500;
+             }
+           </code></pre>
+
+           <pre class="code-block css-safe"><code>
+             .safe {
+               color: rgb(60, 187, 60);
+             }
+           </code></pre>
+
+           <p>To find the right colors, google for color picker, or have a look at
+             <a class="inline" href="https://htmlcolorcodes.com/">htmlcolorcodes.com</a>
+           </p>
+         </div>
+
+         <div class="text">
+           <h3>Text</h3>
+           <p>Different ways to change the way your text looks:</p>
+           <pre class="code-block"><code>
+             p {
+               color: green;
+               font-family: Courier, monaco, monospace;
+               font-size: 1rem;
+               font-style: italic;
+               font-weight: bold;
+             }
+           </code></pre>
+
+           <p>
+             A font family changes the font of your text. For font-family there is
+             no specific default or initial value; the initial value always depends
+             on the browser and/or operating system. In the above example, "Courier"
+             and "Monaco" are real family names of actual fonts, whereas "monospace"
+             is just a generic reference to any font installed on the user's system
+             that's monospaced. If the first two are not found installed, the browser
+             will select the best option, but only from monospace fonts. Without the
+             generic family, the font would default to whatever is the default font
+             on the user's system - likely a serif or sans-serif. Which would be
+             undesirable.
+             For more info see <a class="inline" href="https://css-tricks.com/almanac/properties/f/font-family/">css-tricks.com</a>
+           </p>
+
+           <p>
+             The font size can be defined in pixels, em or rem. A font style italic makes your
+             font cursive and the font weight specifies the boldness.
+           </p>
+
+           <p>
+             Google fonts can be used to upgrade your font family to something special, for specifics, have a look
+             <a class="inline" href="https://developers.google.com/fonts/">here</a>
+           </p>
+         </div>
+
+         <div class="images">
+           <h3>Images</h3>
+           <p>You add an image in your html file with the image tag:</p>
+           <pre class="code-block"><code>
+             &lt;img src="path/to/source" alt="description of image" class="large" /&gt;
+           </code></pre>
+
+           <p>You can also add a background image with css:</p>
+           <pre class="code-block"><code>
+             header {
+               background-image: url(images/wallpaper.png);
+             }
+           </code></pre>
+
+           <p>
+             Your src (source) can be an url or a relative file path. The alt attribute will display whenever
+             the browser fails to load your picture, but is also useful for users that have devices that read
+             out whatever is on the screen.
+           </p>
+    </h3>
+
+    <footer>
+    <p><a href="./six.html">Next >></a></p>
+    <p><a href="./index.html"><< Back to homepage</a><p>
+    </footer>
+
+</html>
