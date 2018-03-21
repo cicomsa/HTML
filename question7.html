@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> CSS/ Positioning </title>
+</head>
+
+<body>
+  <h1>CSS - positioning</h1>
+  <h3>Inline vs Block elements
+
+  <img src="https://cdn-images-1.medium.com/max/1600/1*AFeOAqXNJJdfYAjfXiJ9AQ.jpeg" alt="block vs inline"/>
+  <p>Block elements take in a full line on your webpage. Examples of block elements are:</p>
+  <ul class="list-clean">
+    <li>&lt;p&gt;</li>
+    <li>&lt;div&gt;</li>
+    <li>&lt;footer&gt;</li>
+  </ul>
+  <span><a class="inline" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements">See more on MDN</a></span>
+
+  <p>Inline elements don"t start on a new line and only take up as much width as necessary. Examples are:</p>
+  <ul class="list-clean">
+    <li>&lt;a&gt;</li>
+    <li>&lt;img&gt;</li>
+    <li>&lt;span&gt;</li>
+  </ul>
+  <span><a class="inline" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements">See more on MDN</a></span>
+
+  <h3>The Position Property
+  <p>You can position your "boxes" (elements) on the page by using the CSS position property:</p>
+  <pre class="code-block"><code>
+    header {
+      position: fixed;
+      top: 0;
+    }
+
+    p {
+      position: static;
+    }
+
+    img {
+      position: relative;
+      top: -20px;
+      left: 20px;
+    }
+
+    .nav {
+      position: absolute;
+      top: 120px;
+      right: 0;
+    }
+  </code></pre>
+
+  <ul>
+    <li>Fixed sticks your element to a place on your screen</li>
+    <li>Static is the default value</li>
+    <li>
+      Setting the top, right, bottom and left properties of a relatively-positioned element will cause it to be adjusted
+      away from its normal position. Other content will not be adjusted to fit into any gap left by the element.
+    </li>
+    <li>An absolutely-positioned element is positioned relative to its parent</li>
+  </ul>
+  <p>
+    Some examples of the different sorts of positioning can be found on
+    <a class="inline" href="http://learnlayout.com/position.html"> learnlayout</a>
+  </p>
+</h3>
+</h3>
+</body>
+
+<footer>
+  <p><a href="./">Next >></p>
+  <p><a href ="./"><< Back to homepage<p>
+</footer>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Clean Code: Refractoring</title>
+</head>
+<body>
+  <h1>Clean Code:Refractoring</h1>
+
+          <h3>Refactoring</h3>
+          <h3>
+          <p>
+            Refactoring is a disciplined technique for restructuring an existing body of code, altering its internal structure
+            without changing its external behavior. You refactor code to make it look clean and readable: you remove all unecessary
+            code and comments, try to make your code as DRY and KISS as possible and making sure you don't have any pyramids of
+            doom in terms of indentation.
+          </p>
+          <h3>Indentation</h3>
+          <h3>
+          <p>
+            Indentation is placing nested code two spaces to the right. It makes your code clearer. Let's have a look at an example.
+            Compare the first code block to the second:
+          </p>
+          <pre class="code-block"><code>
+            &lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis
+            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
+
+            or
+
+            &lt;p&gt;
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            &lt;/p&gt;
+
+            or
+
+            &lt;p&gt;
+            &lt;a href="https://www.granneman.com/webdev/coding/formatting-and-indenting-your-html/"&gt;indentation&lt;a&gt;
+            &lt;p&gt;
+          </code></pre>
+
+          <pre class="code-block"><code>
+            &lt;p&gt;
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat.
+            &lt;/p&gt;
+
+            or
+
+            &lt;p&gt;
+              &lt;a href="https://www.granneman.com/webdev/coding/formatting-and-indenting-your-html/"&gt;indentation&lt;a&gt;
+            &lt;p&gt;
+          </code></pre>
+
+          <p>In the first block...</p>
+          <ul class="list-clean">
+            <li>... it is hard to figure out where code ends and text/content begins</li>
+            <li>... it is hard to see where the &lt;/p&gt; tag is</li>
+          </ul>
+
+          <p>Whereas in the second block...</p>
+          <ul class="list-clean">
+            <li>... the start &lt;p&gt; and end &lt;/p&gt; are at the same level, so it"s easy to see that you"ve closed code</li>
+            <li>... it is easier to diffentiate between code and text/content</li>
+          </ul>
+
+          <p>
+            More thoughts and best practices can be found on
+            <a class="inline" href="https://www.granneman.com/webdev/coding/formatting-and-indenting-your-html/">
+              granneman.com
+            </a>
+          </p>
+
+          <h3>DRY</h3>
+          <h3>
+          <div class="double-content">
+            <img src="https://maurits.files.wordpress.com/2011/06/dry.png" alt="dry code" class="dry"/>
+            <p>
+              Dry is an acronym for "Don't Repeat Yourself". Writing dry code makes your code better maintainable. You don't have to update
+              code in two places. It is more readable and reusable - you don't need to define stuff more than once and you reuse already
+              written logic. Also, it's less expensive as it saves you space and time and makes unit testing easier. For more thoughts, see
+              <a class="inline" href="https://www.codementor.io/joshuaaroke/dry-code-vs-wet-code-89xjwv11w">
+                codementor.io
+              </a>
+            </p>
+          </div>
+        </h3>
+          </h3>
+          <h3>KISS</h3>
+          <h3>
+          <div class="double-content">
+            <p>
+              KISS is an acronym for "Keep It Simple Stupid" The simpler your code is, the simpler it will be to maintain it in the future,
+              and of course, if other people see it, they will thank you for that. More thoughts? Have a look at
+              <a class="inline" href="https://simpleprogrammer.com/kiss-one-best-practice-to-rule-them-all/">simpleprogrammer.com</a>
+              or
+              <a class="inline" href="https://itexico.com/blog/bid/99765/software-development-kiss-yagni-dry-3-principles-to-simplify-your-life">itexico.com</a>
+            </p>
+            <blockquote>
+              Any fool can write code that a computer can understand. Good programmers write code that humans can understand. —Martin Fowler
+            </blockquote>
+          </div>
+
+          <h3>Separation of Concerns</h3>
+          <h3>
+          <div class="double-content separation-concerns">
+            <p>
+              In computer science, separation of concerns (SoC) is a design principle for separating a computer program into
+              distinct sections, such that each section addresses a separate concern. In this case, your html files should
+              only be organizing your content, whereas CSS should only be used for styling.
+            </p>
+            <img
+              class="refactoring"
+              src="http://deviq.com/wp-content/uploads/2014/11/Separation-of-Concerns-Feb-2013.png"
+              alt="separation of concerns"
+            />
+          </h3>
+          </h3>
+          </div>
+        </div>
+      </div>
+</h3>
+</body>
+<footer>
+  <p><a href="./">Next >></p>
+  <p><a href ="./"><< Back to homepage<p>
+</footer>
+</html>
