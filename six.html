@@ -6,20 +6,68 @@
 </head>
 
 <body>
-  <h1> CSS: Box Model</h1>
-  <h2>
-    <ul>
-      <li>
-        What is the box model?
-        // this consists of margins, borders, padding, and content
-      </li>
-      <li>
-        What do you use it for?
-      </li>
-      <li>
-        What are margin, padding, and border?
-        // margin:
-      </li>
-    </ul>
-  </h2>
+  <header>
+      <h2 class="header-title">
+        <a href="../index.html">HOW TO HTML & CSS</a>
+      </h2>
+    </header>
+
+    <div class="container">
+      <div class="content">
+        <h1>CSS - boxmodel</h1>
+        <p>
+          All HTML elements can be considered as boxes. In CSS, the term "box model" is used when talking about design and layout.
+          The CSS box model is essentially a box that wraps around every HTML element. It consists of: margins, borders, padding and
+          the actual content.
+        </p>
+
+        <img src="https://www.kasandbox.org/programming-images/misc/boxmodel.png" alt="Box model" />
+
+        <p>You can change the width of all four layers separately like this:</p>
+        <pre class="code-block"><code>
+          .boxmodel {
+              width: 40%;
+              margin: 10px;
+              padding: 5px;
+              border-style: solid;
+              border-width: 1px;
+          }
+        </code></pre>
+
+        <p>
+          Want to know more about the box-model? Have a look at
+          <a class="inline" href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">MDN</a>
+        </p>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="links">
+        <h4>HTML</h4>
+        <a href="./Structure.html">structure</a>
+        <a href="./TagsAndAttributes.html">tags and attributes</a>
+        <a href="./Links.html">links</a>
+      </div>
+      <div class="links">
+        <h4>CSS</h4>
+        <a href="./IntroToCss.html">introduction</a>
+        <a href="./ColorTextAndImages.html">color text images</a>
+        <a href="./BoxModel.html">box model</a>
+        <a href="./Positioning.html">positioning</a>
+        <a href="./FlexBox.html">flexbox</a>
+      </div>
+      <div class="links">
+        <h4>CLEAN CODE</h4>
+        <a href="./Refactoring.html">refactoring</a>
+      </div>
+    </div>
 </body>
+
+<footer>
+  <p> <a href="./seven.html">Next >></a></p>
+  <p>
+    <a href="./index.html">
+      << Back to homepage </a>
+        <p>
+</footer>
+
+</html>
